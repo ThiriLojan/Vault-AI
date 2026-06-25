@@ -1,5 +1,7 @@
 # **Vault AI — Personal Finance & Portfolio Management Web App**
 
+[![Live Demo](https://img.shields.io/badge/🚀_Live_Demo-vault--ai--vert--eight.vercel.app-00d4aa?style=for-the-badge&logo=vercel)](https://vault-ai-vert-eight.vercel.app)
+
 ## **About**
 
 The **Vault AI** project is a personal wealth management and stock tracking web application. This system simplifies the process of tracking live investment portfolios, analyzing market trends, and getting tailored AI financial advice. Designed with a clean dark-mode interface and smooth animations, it offers an easy-to-use experience for investors to manage their money and plan long-term financial goals.
@@ -47,7 +49,7 @@ This application is built using **Next.js 16** and **React 19** for the full-sta
 
 ## **Usage**
 
-- **Preview Visitors:** Log in using the demo credentials (`Username: demo` | `Password: demo`) to test out all platform features right away without database setup.
+- **Live Cloud Demo:** Visit **[vault-ai-vert-eight.vercel.app](https://vault-ai-vert-eight.vercel.app)** and explore instantly using built-in demo credentials (`Username: demo` | `Password: demo`).
 - **Registered Users:** Create a personal account to track real stock holdings, set currency preferences, and customize profile details.
 - **Local Setup Instructions:**
   1. Clone the repository and install dependencies:
