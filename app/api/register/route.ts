@@ -13,7 +13,7 @@ export async function POST(req: Request) {
 
         try {
             await connectToDatabase();
-            const existingDbUser = await UserModel.findOne({ $or: [{ username }, { email }] });
+            const existingDbUser: any = await UserModel.findOne({ $or: [{ username }, { email }] });
             if (existingDbUser) {
                 return NextResponse.json({ error: "Username or email already registered." }, { status: 400 });
             }

@@ -166,7 +166,7 @@ export default function PortfolioTracker() {
 
             <div className="dashboard-grid" style={{ marginTop: '36px' }}>
                 <div>
-                    <AddStockForm onAddStock={handleAddStock} />
+                    <AddStockForm onAddStock={handleAddStock as any} />
                 </div>
 
                 {/* Filter Section */}

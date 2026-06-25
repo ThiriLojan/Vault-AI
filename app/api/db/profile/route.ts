@@ -35,7 +35,7 @@ export async function GET(req: Request) {
             );
         }
 
-        const user = await UserModel.findOne({
+        const user: any = await UserModel.findOne({
             $or: [{ username: userId }, { email: userId }]
         });
         if (user) {

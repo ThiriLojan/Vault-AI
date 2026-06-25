@@ -15,7 +15,7 @@ export default function ChatbotPage() {
       .catch(() => setAiConnected(false));
   }, []);
 
-  const { messages, sendMessage, status, error } = useChat({
+  const { messages, sendMessage, status, error }: any = (useChat as any)({
     api: "/api/chat",
   });
 

@@ -22,7 +22,7 @@ const handler = NextAuth({
                 password: { label: "Password", type: "password" }
             },
             async authorize(credentials) {
-                let dbUser = null;
+                let dbUser: any = null;
                 try {
                     await connectToDatabase();
                     dbUser = await UserModel.findOne({ username: credentials?.username });

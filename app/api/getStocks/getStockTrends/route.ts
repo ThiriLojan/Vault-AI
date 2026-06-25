@@ -22,12 +22,12 @@ export async function POST(req: Request) {
             `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${symbol}&apikey=${apiKey}`
         );
 
-        const data = response.data["Time Series (Daily)"];
+        const data: any = response.data["Time Series (Daily)"];
         if (!data) {
             return NextResponse.json({ error: "Stock data not found." }, { status: 404 });
         }
 
-        const recentPrices = Object.entries(data).slice(0, 5);
+        const recentPrices: any[] = Object.entries(data).slice(0, 5);
         const priceChange = parseFloat(recentPrices[0][1]["4. close"]) - parseFloat(recentPrices[4][1]["4. close"]);
 
         const trendMessage = priceChange > 0

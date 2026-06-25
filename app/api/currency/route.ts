@@ -15,7 +15,7 @@ export async function GET() {
         if (!exchangeRate) throw new Error("Invalid exchange rate data");
 
         return NextResponse.json({ exchangeRate });
-    } catch (error) {
+    } catch (error: any) {
         console.error("Error fetching USD to INR rate:", error.message || error);
         return NextResponse.json({ exchangeRate: 83 }); // Fallback value if API fails
     }

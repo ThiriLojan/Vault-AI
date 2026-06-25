@@ -19,7 +19,7 @@ export async function POST(req: Request) {
       parts: m.parts || [{ type: 'text', text: m.content || '' }]
     }));
 
-    const result = streamText({
+    const result = (streamText as any)({
       model: google('gemini-2.5-flash'),
       maxSteps: 5,
       system: `You are Vault AI, an elite, highly sophisticated AI financial advisor and real-time stock market analyst.
@@ -39,7 +39,7 @@ Format numbers cleanly with currency symbols (e.g. $185.20) and percentages (+2.
               if (!targetSymbol.includes('.') && !targetSymbol.includes('-')) {
                 const searchRes = await yahooFinance.search(symbol);
                 const firstMatch = searchRes.quotes.find((q: any) => q.isYahooFinance);
-                if (firstMatch?.symbol) {
+                if (typeof firstMatch?.symbol === 'string') {
                   targetSymbol = firstMatch.symbol;
                 }
               }
@@ -66,7 +66,7 @@ Format numbers cleanly with currency symbols (e.g. $185.20) and percentages (+2.
     });
 
     return result.toUIMessageStreamResponse({
-      onError: (err) => {
+      onError: (err: any) => {
         console.error("GEMINI STREAM ERROR:", err);
         return err instanceof Error ? err.message : JSON.stringify(err);
       },

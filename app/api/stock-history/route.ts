@@ -23,7 +23,7 @@ export async function GET(req) {
             );
         }
 
-        const timeSeries = response.data["Time Series (Daily)"];
+        const timeSeries: any = response.data["Time Series (Daily)"];
         if (!timeSeries) {
             return new Response(
                 JSON.stringify({ error: "Invalid data or API limit reached." }),
@@ -31,7 +31,7 @@ export async function GET(req) {
             );
         }
 
-        const trendData = Object.entries(timeSeries).map(([date, data]) => ({
+        const trendData = Object.entries(timeSeries).map(([date, data]: [string, any]) => ({
             date,
             price: parseFloat(data["4. close"]),
         }));
