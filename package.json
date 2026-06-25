@@ -1,0 +1,46 @@
+{
+  "name": "vault",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "@ai-sdk/google": "^3.0.83",
+    "@ai-sdk/react": "^3.0.211",
+    "@huggingface/inference": "^4.13.19",
+    "ai": "^6.0.209",
+    "axios": "^1.18.1",
+    "chart.js": "^4.5.1",
+    "embla-carousel-react": "^8.6.0",
+    "lucide-react": "^1.21.0",
+    "mongoose": "^9.7.2",
+    "next": "16.2.9",
+    "next-auth": "^4.24.14",
+    "openai": "^6.44.0",
+    "react": "19.2.4",
+    "react-chartjs-2": "^5.3.1",
+    "react-dom": "19.2.4",
+    "react-slick": "^0.31.0",
+    "react-toastify": "^11.1.0",
+    "recharts": "^3.9.0",
+    "slick-carousel": "^1.8.1",
+    "three": "^0.184.0",
+    "yahoo-finance2": "^3.15.3",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@types/three": "^0.184.1",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.9",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}
